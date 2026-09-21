@@ -1,0 +1,441 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    background-color: #f8fafc;
+    line-height: 1.5;
+}
+
+section{
+    padding: 80px 8%;
+}
+
+h2{
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+h3{
+    margin-bottom: 11px;
+}
+
+p{
+    margin-bottom: 15px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Hero */
+
+.Hero{
+    background-color: rgb(15, 15, 51);
+    color: white;
+    min-height: 80px;
+}
+
+nav{
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+}
+
+nav h1{
+    font-size: 1.7rem;
+}
+
+.Menu{
+    display: flex;
+    list-style: none;
+    gap: 24px;
+}
+
+.Menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Menu a:hover{
+  background-color: #3463b6;
+  color: #1b1035;
+  transform: scale(1.05);
+}
+
+/* Inicio */
+
+.Inicio {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+        135deg,
+        #0f172a,
+        #1e3a8a
+    );
+    color: white;
+}
+
+.contenidoInicio {
+    max-width: 700px;
+}
+
+.contenidoInicio span {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+.contenidoInicio h2 {
+    font-size: 3.5rem;
+    margin: 15px 0;
+}
+
+.contenidoInicio p {
+    font-size: 1.1rem;
+    max-width: 650px;
+}
+
+.contenidoInicio button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.contenidoInicio button:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Acerca de */
+
+.Acerca {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background-color: white;
+}
+
+.Acerca img {
+    width: 45%;
+    min-height: 300px;
+    background-color: #dbeafe;
+    border-radius: 15px;
+}
+
+.Acerca > div {
+    flex: 1;
+}
+
+.Acerca button {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+
+
+/* Servicios */
+
+.Servicios {
+    background-color: #0f172a;
+    color: white;
+    text-align: center;
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.tarjetas article {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.icono {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+
+/* Galeria */
+
+.Galeria {
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+.Tarjetass {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.Tarjetass article {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.Tarjetass img {
+    width: 100%;
+    height: 200px;
+    background-color: #dbeafe;
+    object-fit: cover;
+}
+
+.Tarjetass h3,
+.Tarjetass p {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.Tarjetass h3 {
+    margin-top: 15px;
+}
+
+
+/* Testimonios */
+
+.Testimonios {
+    background-color: #1e3a8a;
+    color: white;
+    text-align: center;
+}
+
+.testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.testimonios article {
+    background-color: white;
+    color: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.testimonios h3 {
+    font-size: 1.1rem;
+}
+
+
+/* Contacto */
+
+.Contacto {
+    background-color: white;
+}
+
+.informacion ul {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.informacion li {
+    margin-bottom: 10px;
+}
+
+.informacion a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.Formulario {
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.Formulario input,
+.Formulario textarea {
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    margin-bottom: 12px;
+}
+
+.Formulario textarea {
+    resize: vertical;
+}
+
+.Boton {
+    background-color: #2563eb;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.Boton:hover {
+    background-color: #1d4ed8;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #0f172a;
+    color: white;
+    padding: 50px 8% 20px;
+}
+
+.footerContenido {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footerContenido h3 {
+    color: #38bdf8;
+}
+
+.footerRedes {
+    display: flex;
+    flex-direction: column;
+}
+
+.footerRedes a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.footerRedes a:hover {
+    color: #38bdf8;
+}
+
+.footerDerechos {
+    border-top: 1px solid #334155;
+    margin-top: 40px;
+    padding-top: 20px;
+    text-align: center;
+}
+
+
+/* Pantalla Tamaño Tableta */
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    section {
+        padding: 60px 5%;
+    }
+
+    .contenidoInicio h2 {
+        font-size: 2.8rem;
+    }
+
+    .tarjetas,
+    .Tarjetass,
+    .testimonios {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Acerca {
+        gap: 30px;
+    }
+
+}
+
+
+/* Tamaño pantalla Movil */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 50px 5%;
+    }
+
+
+    /* Menú */
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .Menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+
+    /* Inicio */
+
+    .Inicio {
+        min-height: 500px;
+    }
+
+    .contenidoInicio h2 {
+        font-size: 2.3rem;
+    }
+
+    .contenidoInicio p {
+        font-size: 1rem;
+    }
+
+
+    /* Acerca */
+
+    .Acerca {
+        flex-direction: column;
+    }
+
+    .Acerca img {
+        width: 100%;
+    }
+
+
+    /* Tarjetas */
+
+    .tarjetas,
+    .Tarjetass,
+    .testimonios {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Formulario */
+
+    .Formulario {
+        width: 100%;
+    }
+
+    .Formulario input,
+    .Formulario textarea {
+        width: 100%;
+    }
+
+
+    /* Footer */
+
+    .footerContenido {
+        flex-direction: column;
+    }
+
+}
