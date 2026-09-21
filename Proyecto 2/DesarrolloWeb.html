@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Software</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #1a1d24;
+            background-image:
+                radial-gradient(circle at 15% 0%, rgba(13,110,253,.20), transparent 40%),
+                radial-gradient(circle at 85% 15%, rgba(214,51,132,.16), transparent 40%),
+                radial-gradient(circle at 50% 100%, rgba(25,135,84,.12), transparent 45%);
+            background-attachment: fixed;
+        }
+
+        .hero{
+            border-bottom: 1px solid rgba(255,255,255,.08);
+            padding-bottom: 1rem;
+        }
+
+        .hero h1{
+            font-weight: 700;
+            background: linear-gradient(90deg, #6ea8fe, #d633b0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .card.text-bg-dark{
+            background-color: rgba(35,38,46,.9) !important;
+            border: 1px solid #343a40;
+            border-top: 3px solid var(--track-color, #0d6efd);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+        }
+
+        .card.text-bg-dark:hover{
+            transform: translateY(-4px);
+            border-color: var(--track-color, #0d6efd);
+            box-shadow: 0 10px 22px -12px var(--track-color, #0d6efd);
+        }
+
+        .track-thumb{
+            aspect-ratio: 16/9;
+            width: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .track-badge{
+            display: inline-block;
+            font-size: .72rem;
+            font-weight: 600;
+            color: var(--track-color, #0d6efd);
+            background: color-mix(in srgb, var(--track-color, #0d6efd) 18%, transparent);
+            border: 1px solid color-mix(in srgb, var(--track-color, #0d6efd) 40%, transparent);
+            padding: .2rem .55rem;
+            border-radius: 999px;
+            margin-bottom: .55rem;
+        }
+
+        /* Móvil en vertical */
+        @media (max-width: 576px) and (orientation: portrait){
+            h1{ font-size: 1.8rem; }
+            .hero p{ font-size: .95rem; }
+            .btn-lg{ padding: .5rem 1rem; font-size: 1rem; }
+        }
+
+        /* Móvil en horizontal */
+        @media (max-height: 500px) and (orientation: landscape){
+            .hero{ padding-top: 5.5rem !important; }
+            h1{ font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body class="bg-dark">
+
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">🖥️Desarrollo de Software</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menú</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li>
+                        <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../Proyectos.html">Volver</a></li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid hero">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4 text-center mb-5">
+                        <h1 class="text-bg-dark p-3 mt-5">
+                        Desarrollo
+                        </h1>
+                        <p class="text-bg-dark p-3">Bienvenido a la página del programa de Desarrollo de Software. Aquí encontrarás las áreas principales que se trabajan a lo largo de la formación.</p>
+                        <button type="button" class="btn btn-lg" style="background: linear-gradient(90deg,#0d6efd,#d633b0); color:#fff; border:none;">Ver más</button>
+                        <button type="button" class="btn btn-outline-light btn-lg">Contacto</button>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-4">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card text-bg-dark h-100" style="--track-color:#0d6efd;">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=60" class="track-thumb" alt="Pantalla con código de una página web">
+                    <div class="card-body">
+                        <span class="track-badge">Web</span>
+                        <h5 class="card-title">Desarrollo Web</h5>
+                        <p class="card-text">Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+                        <p class="card-text text-secondary small">Sinopsis: aprenderás a construir páginas y aplicaciones web completas, desde la maquetación con HTML y CSS hasta la lógica que las hace interactivas, integrando buenas prácticas de diseño responsive.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-between align-items-center pt-0">
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                        <small class="text-secondary">9 mins</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-bg-dark h-100" style="--track-color:#6f42c1;">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=60" class="track-thumb" alt="Monitor mostrando código de programación">
+                    <div class="card-body">
+                        <span class="track-badge">Ciclo de vida</span>
+                        <h5 class="card-title">Desarrollo Software</h5>
+                        <p class="card-text">Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+                        <p class="card-text text-secondary small">Sinopsis: cubre el ciclo completo de construcción de software, desde el análisis de requisitos y el diseño de la solución hasta la implementación, pruebas y mantenimiento del código.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-between align-items-center pt-0">
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                        <small class="text-secondary">9 mins</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-bg-dark h-100" style="--track-color:#fd7e14;">
+                    <img src="https://images.unsplash.com/photo-1684430598409-750ae3284704?auto=format&fit=crop&w=800&q=60" class="track-thumb" alt="Circuito electrónico de una placa">
+                    <div class="card-body">
+                        <span class="track-badge">Sistemas</span>
+                        <h5 class="card-title">Desarrollo Hardware</h5>
+                        <p class="card-text">Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+                        <p class="card-text text-secondary small">Sinopsis: explora el diseño y ensamble de componentes físicos y sistemas embebidos, conectando circuitos, sensores y microcontroladores con soluciones de software.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-between align-items-center pt-0">
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                        <small class="text-secondary">9 mins</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-bg-dark h-100" style="--track-color:#20c997;">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=60" class="track-thumb" alt="Monitor mostrando una interfaz digital">
+                    <div class="card-body">
+                        <span class="track-badge">Interfaz</span>
+                        <h5 class="card-title">Desarrollo FrontEnd</h5>
+                        <p class="card-text">Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+                        <p class="card-text text-secondary small">Sinopsis: se enfoca en la parte visual e interactiva de una aplicación, usando HTML, CSS y frameworks como Bootstrap o React para construir interfaces atractivas y fáciles de usar.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-between align-items-center pt-0">
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                        <small class="text-secondary">9 mins</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-bg-dark h-100" style="--track-color:#198754;">
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=60" class="track-thumb" alt="Monitor de servidor con pantalla plana">
+                    <div class="card-body">
+                        <span class="track-badge">Servidor</span>
+                        <h5 class="card-title">Desarrollo BackEnd</h5>
+                        <p class="card-text">Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+                        <p class="card-text text-secondary small">Sinopsis: trabaja la lógica del servidor, las bases de datos y las APIs que dan soporte a una aplicación, garantizando que la información se procese y almacene correctamente.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-between align-items-center pt-0">
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                        <small class="text-secondary">9 mins</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card text-bg-dark h-100" style="--track-color:#d63384;">
+                    <img src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?auto=format&fit=crop&w=800&q=60" class="track-thumb" alt="Representación abstracta de una red neuronal">
+                    <div class="card-body">
+                        <span class="track-badge">Datos</span>
+                        <h5 class="card-title">Desarrollo IA</h5>
+                        <p class="card-text">Creación de sitios web modernos, rápidos y adaptables a cualquier dispositivo.</p>
+                        <p class="card-text text-secondary small">Sinopsis: introduce los fundamentos de inteligencia artificial y aprendizaje automático, aplicándolos a la construcción de modelos y soluciones basadas en datos.</p>
+                    </div>
+                    <div class="card-body d-flex justify-content-between align-items-center pt-0">
+                        <div>
+                            <a href="#" class="btn btn-sm btn-outline-secondary">View</a>
+                            <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                        </div>
+                        <small class="text-secondary">9 mins</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

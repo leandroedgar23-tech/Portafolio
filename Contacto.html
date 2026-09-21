@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacto</title>
+
+    <!---------- Tailwind ----------->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!------------ Bootstrap ---------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body style="background-color: #071A2B; color: white">
+
+<header class="sticky top-0 z-50 bg-[#071A2B]/90 backdrop-blur border-b border-white/10">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+
+        <!-------------- Logo ------------------->
+        <a href="index.html" class="flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white font-bold">LM</span>
+            <span class="font-bold text-white">Leandro Manco</span>
+        </a>
+
+        <!--------------- Menu ------------------->
+        <ul class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+            <li><a href="index.html" class="hover:text-blue-400 transition-colors">Inicio</a></li>
+            <li><a href="SobreMi.html" class="hover:text-blue-400 transition-colors">Sobre mí</a></li>
+            <li><a href="Proyectos.html" class="hover:text-blue-400 transition-colors">Proyectos</a></li>
+            <li><a href="Habilidades.html" class="hover:text-blue-400 transition-colors">Habilidades</a></li>
+            <li><a href="Contacto.html" class="hover:text-blue-400 transition-colors">Contacto</a></li>
+        </ul>
+
+        <!------------------ Boton ---------------->
+        <a href="#" class="inline-flex items-center px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold transition-colors">Dowloader</a>
+
+    </nav>
+</header>
+
+<section class="max-w-3xl mx-auto px-6 py-16">
+    <span class="inline-block mb-3 px-3 py-1 rounded-full text-xs font-semibold text-blue-400 bg-blue-500/10 border border-blue-500/30">Contacto</span>
+    <h1 class="display-5 fw-bold mb-4">Hablemos</h1>
+    <p class="text-secondary fs-5 mb-5">Si quieres escribirme, puedes usar cualquiera de estos medios o el formulario de abajo.</p>
+
+    <div class="row g-4 mb-5">
+        <div class="col-md-4">
+            <div class="p-4 rounded-lg border border-white/10 bg-white/5">
+                <h5 class="fw-bold mb-1">Correo</h5>
+                <p class="text-secondary mb-0">leandroedgar23@gmail.com</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-lg border border-white/10 bg-white/5">
+                <h5 class="fw-bold mb-1">GitHub</h5>
+                <p class="text-secondary mb-0">github.com/leandroedgar23-tech</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-lg border border-white/10 bg-white/5">
+                <h5 class="fw-bold mb-1">Ubicación</h5>
+                <p class="text-secondary mb-0">Medellín, Colombia</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-4 rounded-lg border border-white/10 bg-white/5">
+                <h5 class="fw-bold mb-1">Numero de telefono</h5>
+                <p class="text-secondary mb-0">3242594461</p>
+            </div>
+        </div>
+    </div>
+
+    <form>
+        <div class="mb-3">
+            <label class="form-label">Nombre</label>
+            <input type="text" class="form-control bg-transparent text-white border-secondary" placeholder="Tu nombre">
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Correo</label>
+            <input type="email" class="form-control bg-transparent text-white border-secondary" placeholder="tu@correo.com">
+        </div>
+        <div class="mb-4">
+            <label class="form-label">Mensaje</label>
+            <textarea class="form-control bg-transparent text-white border-secondary" rows="4" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="inline-flex items-center px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold transition-colors">Enviar mensaje</button>
+    </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

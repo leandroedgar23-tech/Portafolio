@@ -1,0 +1,340 @@
+/* root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #f4efff;
+  background-color: #1b1035;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1px, transparent 1px),
+    radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+  background-size: 90px 90px, 130px 130px;
+  background-position: 0 0, 45px 60px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/* Encabezado */
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  background-color: #120a26;
+  border-bottom: 1px solid #35225e;
+}
+
+.logo {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.4rem;
+  color: #ffd166;
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: rotate(-3deg) scale(1.04);
+}
+
+/* Mobile first */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.menu a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.menu a:hover {
+  background-color: #ff6b9d;
+  color: #1b1035;
+  transform: scale(1.05);
+}
+
+
+/* Hero */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 56px 20px;
+  background: linear-gradient(200deg, #2a1b4d 0%, #1b1035 70%);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(255, 209, 102, 0.18), transparent 70%);
+  pointer-events: none;
+}
+
+.luna {
+  display: block;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  animation: flotar 4s ease-in-out infinite;
+}
+
+.insignia {
+  position: relative;
+  display: inline-block;
+  font-size: 0.78rem;
+  color: #ffd166;
+  background-color: rgba(255, 209, 102, 0.12);
+  border: 1px solid rgba(255, 209, 102, 0.4);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  position: relative;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  font-size: 1.7rem;
+  color: #ffd166;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 14px rgba(255, 209, 102, 0.25);
+  animation: entrarArriba 0.8s ease-out;
+}
+
+.hero p {
+  position: relative;
+  font-size: 1rem;
+  max-width: 460px;
+  margin: 0 auto 28px auto;
+  color: #d8cdf2;
+}
+
+.boton-cta {
+  position: relative;
+  display: inline-block;
+  background-color: #ff6b9d;
+  color: #1b1035;
+  font-weight: bold;
+  padding: 14px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.boton-cta:hover {
+  background-color: #ffd166;
+  transform: scale(1.06);
+  box-shadow: 0 8px 18px rgba(255, 209, 102, 0.35);
+}
+
+.decorativo {
+  position: relative;
+  margin: 36px auto 0 auto;
+  width: fit-content;
+  display: flex;
+  gap: 6px;
+  font-size: 2rem;
+  color: #ffd166;
+}
+
+.decorativo span {
+  animation: flotar 2.6s ease-in-out infinite;
+}
+
+.decorativo span:nth-child(1) {
+  font-size: 0.7em;
+  opacity: 0.6;
+  animation-delay: 0s;
+}
+
+.decorativo span:nth-child(2) {
+  font-size: 0.85em;
+  opacity: 0.8;
+  animation-delay: 0.3s;
+}
+
+.decorativo span:nth-child(3) {
+  font-size: 1em;
+  animation-delay: 0.6s;
+}
+
+@keyframes entrarArriba {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flotar {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+
+/* Tarjetas */
+.caracteristicas {
+  position: relative;
+  padding: 60px 20px 44px;
+}
+
+.caracteristicas::before {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin: 0 auto 24px auto;
+  background: linear-gradient(90deg, #ff6b9d, #ffd166);
+  border-radius: 999px;
+}
+
+.caracteristicas h2 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  margin-bottom: 28px;
+  color: #ffd166;
+}
+
+.tarjetas {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background-color: #2a1b4d;
+  border: 1px solid #6a4fb3;
+  border-radius: 10px;
+  padding: 26px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  background-color: #35225e;
+  border-color: #ff6b9d;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.tarjeta .icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+  background: linear-gradient(160deg, #35225e, #1b1035);
+  border: 1px solid #6a4fb3;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta:hover .icono {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+.tarjeta h3 {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-bottom: 10px;
+  color: #ffd166;
+}
+
+.tarjeta p {
+  color: #d8cdf2;
+  font-size: 0.95rem;
+}
+
+
+/* Footer */
+.pie {
+  text-align: center;
+  padding: 22px;
+  background-color: #120a26;
+  border-top: 1px solid #35225e;
+  font-size: 0.85rem;
+  color: #a9a0c9;
+}
+
+
+/* MediaQueries */
+@media (min-width: 700px) {
+  .encabezado {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .menu a {
+    width: auto;
+    padding: 8px 18px;
+  }
+}
+
+/* Pantallas Grandes */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero p {
+    font-size: 1.15rem;
+    max-width: 620px;
+  }
+
+  .tarjetas {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .tarjeta {
+    flex: 1;
+  }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .hero h1,
+  .luna,
+  .decorativo span {
+    animation: none;
+  }
+}
